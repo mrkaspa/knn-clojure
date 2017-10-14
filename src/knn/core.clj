@@ -1,5 +1,5 @@
 (ns knn.core
-  (:require [knn.calcs])
+  (:require [knn.calcs :refer [knn]])
   (:gen-class))
 
 (def training-set
@@ -18,4 +18,4 @@
   [& args]
   (let [query [4 2]
         k 4]
-    (println query "-" (knn.calcs/knn training-set query k))))
+    (println query "-" (knn training-set query k))))
